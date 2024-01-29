@@ -1,6 +1,6 @@
 # CargoSensePro
 
-# Automated Train Container Monitoring System
+- Automated Train Container Monitoring System
 
 ## Abstract
 This project aims to automatically detect and record train container parameters such as weight, content height, and container ID at different stations using an ESP-32 microcontroller, HC-SR04 ultrasonic sensor, load cells, RFID, servo motor, and OLED display. The collected data is uploaded to a ThingSpeak server and rendered on an HTML website for real-time monitoring.
