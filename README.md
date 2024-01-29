@@ -3,13 +3,13 @@
 - Automated Train Container Monitoring System
 
 ### CargoSensePro - Dashboard
-<img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/dashboad.jpeg" alt="Image 1" height="250">
+<img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/dashboad.jpeg" alt="Image 1" height="280">
 
 ### CargoSensePro - Project Details
-<img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/project%20details.jpeg" alt="Image 1" height="250">
+<img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/project%20details.jpeg" alt="Image 1" height="280">
 
 ### CargoSensePro - Contact
-<img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/contact.jpeg" alt="Image 1" height="250">
+<img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/contact.jpeg" alt="Image 1" height="280">
 
 
 ## Abstract
