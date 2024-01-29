@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>CargoSensePro | Home</title>
+</head>
+<body>
+
+    <!-- Navbar - fixed -->
+    <section class="font-mono z-50">
+        <nav class="fixed z-50 bg-white top-0 left-0 w-full py-2 px-4 flex items-center justify-between border shadow-md">
+            <!-- Brand Logo and Name on the Left -->
+            <a class="flex items-center space-x-2" href="#">
+              <img src="static/your-logo.png" alt="yerunkar corner Logo" class="h-12 w-12 rounded-full border-2"> 
+                <!-- Adjust height and width as needed -->
+              <span class="text-2xl font-bold text-gray-600 hover:text-gray-900">HandMadeProjects</span>
+            </a>
+        
+            <!-- Tabs on the Right
+            <div class="flex items-center space-x-10">
+              <a href="#seasonal_items" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Seasonal Items</a>
+              <a href="#items" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">All Food Items</a>
+              <a href="#contact" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Contact</a>
+            </div> -->
+
+            <!-- Tabs on the Right - responsive -->
+          <div class="hidden md:flex items-center space-x-10">
+            <a href="#software" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Software-Projects</a>
+            <a href="#hardware" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Hardware-Projects</a>
+            <a href="#contact" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Contact</a>
+          </div>
+
+           <!-- Mobile Menu Toggle (Hamburger Icon) -->
+            <div class="md:hidden">
+              <button id="mobileMenuToggle" class="text-xl text-gray-600 hover:text-gray-900">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+              </button>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white py-2 px-4 shadow-md">
+              <a href="#software" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Software-Projects</a>
+              <a href="#hardware" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Hardware-Projects</a>
+              <a href="#contact" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Contact</a>
+          </div>
+
+          </nav>
+    </section>
+    
+</body>
+</html>
