@@ -3,13 +3,13 @@
 - Automated Train Container Monitoring System
 
 ### CargoSensePro - Dashboard
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/get%20latest%20sensor%20data%20api.jpeg" alt="Image 1" height="250">
+<img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/dashboad.jpeg" alt="Image 1" height="250">
 
 ### CargoSensePro - Project Details
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/get%20latest%20sensor%20data%20api.jpeg" alt="Image 1" height="250">
+<img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/project%20details.jpeg" alt="Image 1" height="250">
 
 ### CargoSensePro - Contact
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/get%20latest%20sensor%20data%20api.jpeg" alt="Image 1" height="250">
+<img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/contact.jpeg" alt="Image 1" height="250">
 
 
 ## Abstract
