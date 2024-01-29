@@ -2,6 +2,16 @@
 
 - Automated Train Container Monitoring System
 
+### CargoSensePro - Dashboard
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/get%20latest%20sensor%20data%20api.jpeg" alt="Image 1" height="250">
+
+### CargoSensePro - Project Details
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/get%20latest%20sensor%20data%20api.jpeg" alt="Image 1" height="250">
+
+### CargoSensePro - Contact
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/get%20latest%20sensor%20data%20api.jpeg" alt="Image 1" height="250">
+
+
 ## Abstract
 This project aims to automatically detect and record train container parameters such as weight, content height, and container ID at different stations using an ESP-32 microcontroller, HC-SR04 ultrasonic sensor, load cells, RFID, servo motor, and OLED display. The collected data is uploaded to a ThingSpeak server and rendered on an HTML website for real-time monitoring.
 
