@@ -48,3 +48,13 @@ Specify the project's license.
 
 ## Acknowledgements
 Acknowledge any third-party tools, libraries, or resources used in the project.
+
+## Api
+https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=9&field2=8.2&field3=10.3
+https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=9&field2=8.1&field3=10.1
+
+https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=5&field2=8.4&field3=10.3
+https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=5&field2=8.2&field3=10.5
+
+https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=11&field2=8.9&field3=10.9
+https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=11&field2=8.2&field3=10.5

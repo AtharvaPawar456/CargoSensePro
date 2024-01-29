@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" type="image/png" href="static\cargo-logo.png">
+
+    <!-- 600 seconds = 10 minutes -->
+    <meta http-equiv="refresh" content="20" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <title>CargoSensePro | Home</title>
+    <title>CargoSensePro | Dashboard</title>
 </head>
-<body>
+
+<body class="font-mono">
 
     <!-- Navbar - fixed -->
     <section class="font-mono z-50">
         <nav class="fixed z-50 bg-white top-0 left-0 w-full py-2 px-4 flex items-center justify-between border shadow-md">
+
             <!-- Brand Logo and Name on the Left -->
             <a class="flex items-center space-x-2" href="#">
-              <img src="static/your-logo.png" alt="yerunkar corner Logo" class="h-12 w-12 rounded-full border-2"> 
+              <img src="static\cargo-logo.png" alt="yerunkar corner Logo" class="h-12 w-12 rounded-full border-2"> 
                 <!-- Adjust height and width as needed -->
-              <span class="text-2xl font-bold text-gray-600 hover:text-gray-900">HandMadeProjects</span>
+              <span class="text-2xl font-bold text-gray-600 hover:text-gray-900">CargoSensePro</span>
             </a>
         
             <!-- Tabs on the Right
@@ -29,30 +36,170 @@
             </div> -->
 
             <!-- Tabs on the Right - responsive -->
-          <div class="hidden md:flex items-center space-x-10">
-            <a href="#software" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Software-Projects</a>
-            <a href="#hardware" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Hardware-Projects</a>
-            <a href="#contact" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Contact</a>
-          </div>
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#dashboard" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Dashboard</a>
+                <a href="#projectdetails" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Project Details</a>
+                <a href="#contact" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Contact</a>
+            </div>
 
-           <!-- Mobile Menu Toggle (Hamburger Icon) -->
+            <!-- Mobile Menu Toggle (Hamburger Icon) -->
             <div class="md:hidden">
-              <button id="mobileMenuToggle" class="text-xl text-gray-600 hover:text-gray-900">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                  </svg>
-              </button>
-          </div>
+                <button id="mobileMenuToggle" class="text-xl text-gray-600 hover:text-gray-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
 
-          <!-- Mobile Menu -->
-          <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white py-2 px-4 shadow-md">
-              <a href="#software" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Software-Projects</a>
-              <a href="#hardware" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Hardware-Projects</a>
-              <a href="#contact" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Contact</a>
-          </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white py-2 px-4 shadow-md">
+                <a href="#dashboard" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Dashboard</a>
+                <a href="#projectdetails" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Project Details</a>
+                <a href="#contact" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Contact</a>
+            </div>
 
-          </nav>
+        </nav>
     </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="h-screen bg-gray-100">
+        <div class="mx-20 my-16 pt-20">
+
+            <div class="text-center text-3xl font-bold">Cargo Id : <span id="cargoId"></span></div>
+
+            <div class="grid grid-cols-2 gap-2 pt-8">
+
+                <!-- last readings -->
+                <div id="lastReadings" class="border shadow-xl text-black p-10 rounded-xl border-2 border-gray-400">
+                    <div class="text-xl text-center font-bold">Last Cargo Readings</div>
+
+                    <div class="text-md mt-4">Cargo Weight : <span id="lastWeight"></span></div>
+                    <div class="text-md mt-4">Cargo Container Content Height : <span id="lastHeight"></span></div>
+                </div>
+
+                <!-- current readings -->
+                <div id="currentReadings" class="border shadow-xl text-black p-10 rounded-xl border-2 border-gray-400">
+                    <div class="text-xl text-center font-bold">Current Cargo Readings</div>
+                    <div class="text-md mt-4">Cargo Weight : <span id="currentWeight"></span></div>
+                    <div class="text-md mt-4">Cargo Container Content Height : <span id="currentHeight"></span></div>
+                </div>
+
+            </div>
+
+            <div id="difference" class="mt-10 border shadow-xl text-black p-10 rounded-xl border-2 border-gray-400 bg-yellow-100">
+                <div class="text-xl text-center font-bold">Difference in Last and Current Cargo Readings</div>
+                <div class="text-xl mt-4">Cargo Weight Difference : <span id="diffWeight"></span></div>
+                <div class="text-xl mt-4">Cargo Container Content Height Difference : <span id="diffHeight"></span></div>
+            </div>
+
+
+        </div>
+    </section>
+    
+    <!-- Project Details -->
+    <section id="projectdetails" class="bg-green-100 p-20">
+        <div class="text-3xl mt-6 mb-2 font-bold text-center">Project Details</div>
+
+        <div class="text-2xl mt-6 mb-2 font-bold">Abstract</div>
+        <p>This project aims to automatically detect and record train container parameters such as weight, content height, and container ID at different stations using an ESP-32 microcontroller, HC-SR04 ultrasonic sensor, load cells, RFID, servo motor, and OLED display. The collected data is uploaded to a ThingSpeak server and rendered on an HTML website for real-time monitoring.</p>
+
+        <div class="text-2xl mt-6 mb-2 font-bold">Problem Statement</div>
+        <p>Current train container monitoring systems lack automation, leading to manual errors and delays in identifying data loss during transit. This project addresses these issues by providing an automated solution for monitoring and recording container parameters.</p>
+
+        <div class="text-2xl mt-6 mb-2 font-bold">Description</div>
+        <p>The system comprises ESP-32 microcontroller, HC-SR04 ultrasonic sensor for height measurement, two 10kg load cells for weight measurement, RFID for container identification, a servo motor for control, and an OLED display for real-time information. The collected data is sent to a ThingSpeak server and visualized on an HTML website.</p>
+
+        <div class="text-2xl mt-6 mb-2 font-bold">Approach</div>
+        <ul>
+            <li>- Station 1: <br>RFID identifies the container, load cells measure weight, and ultrasonic sensor measures height. Data is sent to ThingSpeak.
+                Transit: Container moves to Station 2.
+            </li>
+            <li>
+                - Station 2: <br>RFID identifies the container, load cells and ultrasonic sensor measure parameters. Data is compared with Station 1. Discrepancies indicate data loss.
+            </li>
+        </ul>
+
+        <div class="text-2xl mt-6 mb-2 font-bold">Advantage</div>
+        <ul>
+            <li>- Automation reduces manual errors.</li>
+            <li>- Real-time monitoring of container parameters.</li>
+            <li>- Quick identification of data loss during transit.</li>
+        </ul>
+
+        <div class="text-2xl mt-6 mb-2 font-bold">Limitation</div>
+        <ul>
+            <li>- Dependency on RFID for container identification.</li>
+            <li>- Accuracy of measurements may be affected by external factors.</li>
+        </ul>
+
+        <div class="text-2xl mt-6 mb-2 font-bold">Future Scope</div>
+        <ul>
+            <li>- Integration with GPS for location tracking.</li>
+            <li>- Implementation of machine learning for predictive analysis.</li>
+            <li>- Enhanced security features for RFID.</li>
+        </ul>
+        
+    </section>
+
+
+    <!-- Footer -->
+    <section id="contact" class="pt-20 text-mono text-xl py-4 px-2 mt-10 md:px-20 bg-gray-100" >
+
+        <div class="border border-gray-500 mx-2 md:border-gray-100 md:underline text-mono text-2xl font-bold text-center py-4 mb-6">Contact</div>
+  
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 mb-10">
+          <div>
+            <div class="text-md text-gray-600"><b>CargoSensePro</b> <br> - Automated Train Container Monitoring System
+            </div>
+          </div>
+  
+          <div class="text-center text-md mt-6 md:mt-0 text-gray-600">
+            <div>Member 1 : (123)</div>
+            <div>Member 2 : (123)</div>
+            <div>Member 3 : (123)</div>
+          </div>
+        </div>
+  
+        <hr>
+        <div class="text-center font-bold text-gray-600 mt-4">CargoSensePro | 2024</div>
+      </section>
+
+
+    <script>
+        // Fetch API data
+        fetch('https://api.thingspeak.com/channels/2035354/feeds.json?results=4')
+        .then(response => response.json())
+        .then(data => {
+            // Get the last entry's field1 data as myid
+            const myid = data.feeds[data.feeds.length - 1].field1;
+
+            // Sort the feeds by myid
+            const sortedFeeds = data.feeds.filter(feed => feed.field1 === myid);
+
+            // Display last readings
+            document.getElementById('lastWeight').innerText = sortedFeeds[0].field2;
+            document.getElementById('lastHeight').innerText = sortedFeeds[0].field3;
+
+            // Display current readings
+            document.getElementById('currentWeight').innerText = sortedFeeds[1].field2;
+            document.getElementById('currentHeight').innerText = sortedFeeds[1].field3;
+            
+            // Display Cargo Id
+            document.getElementById('cargoId').innerText = myid;
+
+            // Difference in readings
+            document.getElementById('diffWeight').innerText = (sortedFeeds[1].field2 - sortedFeeds[0].field2).toFixed(2);
+            document.getElementById('diffHeight').innerText = (sortedFeeds[1].field3 - sortedFeeds[0].field3).toFixed(2);
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+
+        // JavaScript to toggle mobile menu visibility
+        document.getElementById('mobileMenuToggle').addEventListener('click', function () {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+    </script>
     
 </body>
 </html>
