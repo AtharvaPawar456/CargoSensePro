@@ -68,3 +68,6 @@ https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=5&field2=8.2&f
 
 https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=11&field2=8.9&field3=10.9
 https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=11&field2=8.2&field3=10.5
+
+https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=20&field2=8.9&field3=10.9
+https://api.thingspeak.com/update?api_key=K8CH7XH11OFPA1WG&field1=20&field2=8.2&field3=10.5
