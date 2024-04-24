@@ -1,6 +1,24 @@
 # CargoSensePro
+    - Automated Train Container Monitoring System
 
-- Automated Train Container Monitoring System
+### Wokwi Simulation : 
+    - https://wokwi.com/projects/388267915240027137
+
+### Thingspeak Server Public View : 
+    - https://thingspeak.com/channels/2035354
+
+### Deployed Website : 
+    - https://atharvapawar456.github.io/CargoSensePro/
+
+### Mobile Hotspot Setting:
+    - ssid = "CargoPro"
+    - Pass = "Cargo@123"
+
+
+### UART Communication between ESP32-Master and ESP32-Slave
+    - ESP32 (Master) : Tx:Yellow  ; Rx:Green
+    - ESP32 (Slave ) : Rx:Yellow  ; Tx:Green
+
 
 ### CargoSensePro - Dashboard
 <img src="https://github.com/AtharvaPawar456/CargoSensePro/blob/main/project%20output/dashboad.jpeg" alt="Image 1" height="280">
